@@ -12,51 +12,54 @@ function verificar(){
       var img = document.createElement('img')
       img.setAttribute('id','foto')
       if(radsexo[0].checked){
-          genero = 'masculino'
+          genero = 'homem'
           if(idade >=0 && idade <=3){
 
-            img.setAttribute('src','images/babyboy.jpg')
+            img.setAttribute('src','./images/babyboy.jpg')
     
         }else if(idade >=3 && idade <=14){
     
-            img.setAttribute('src','images/boy.jpg')
+            img.setAttribute('src','./images/boy.jpg')
     
         }else if(idade >=14 && idade <=21){
     
-            img.setAttribute('src','images/youngman.jpg')
+            img.setAttribute('src','./images/youngman.jpg')
     
         }else if(idade >=21 && idade <=60){
     
-            img.setAttribute('src','images/man.jpg')
+            img.setAttribute('src','./images/man.jpg')
     
         }else{
     
-            img.setAttribute('src','images/oldman.jpg')
+            img.setAttribute('src','./images/oldman.jpg')
             
         }
       }else if(radsexo[1].checked){
-          genero = 'feminino'
+          genero = 'mulher'
       }
       if(idade >=0 && idade <=3){
 
-        img.setAttribute('src','images/babygirl.jpg')
+        img.setAttribute('src','./images/babygirl.jpg')
 
     }else if(idade >=3 && idade <=14){
 
-        img.setAttribute('src','images/girl.jpg')
+        img.setAttribute('src','./images/girl.jpg')
 
     }else if(idade >=14 && idade <=21){
 
-        img.setAttribute('src','images/youngwoman.jpg')
+        img.setAttribute('src','./images/youngwoman.jpg')
 
     }else if(idade >=21 && idade <=60){
 
-        img.setAttribute('src','images/woman.jpg')
+        img.setAttribute('src','./images/woman.jpg')
 
     }else{
 
-        img.setAttribute('src','images/oldwoman.jpg')
+        img.setAttribute('src','./images/oldwoman.jpg')
         
     }
     }
+
+    res.innerHTML = `Detectamos ${genero} com ${idade}`
+    res.appendChild(img)
 }
